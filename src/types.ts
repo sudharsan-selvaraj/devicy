@@ -25,8 +25,8 @@ type Device = {
 interface IDeviceTracker {
   start: () => Promise<void>;
   stop: () => Promise<void>;
-  onDeviceConnectLister: (listener: DeviceListenerCallback) => void;
-  onDeviceDisconnectLister: (listener: DeviceListenerCallback) => void;
+  addConnectionLister: (listener: DeviceListenerCallback) => void;
+  addDisconnectionListner: (listener: DeviceListenerCallback) => void;
 }
 
 type DeviceListenerCallback = (device: Device) => void;

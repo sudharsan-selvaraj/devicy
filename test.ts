@@ -1,19 +1,27 @@
 import { gunzip } from 'zlib';
-import { AndroidTracker, IosTracker } from './src/index';
+import { AndroidTracker, Device, IosTracker } from './src/index';
 
 async function main() {
-  const tracker = new IosTracker();
-  // const tracker = new AndroidTracker();
-  tracker.onDeviceConnectLister((d) => {
+  const deviceConnectedCallback = (device: Device) => {
     console.log('*** Connected ***');
-    console.log(d);
-  });
-  tracker.onDeviceDisconnectLister((d) => {
-    console.log('*** Removed ***');
-    console.log(d);
-  });
+    console.log(device);
+  };
 
-  await tracker.start();
+  const deviceRemovecCallback = (device: Device) => {
+    console.log('*** Removed ***');
+    console.log(device);
+  };
+
+  // Detect connected devices
+  const androidTracker = new AndroidTracker();
+  const iosTracker = new IosTracker();
+  androidTracker.addConnectionLister(deviceConnectedCallback);
+  androidTracker.addDisconnectionListner(deviceRemovecCallback);
+
+  iosTracker.addConnectionLister(deviceConnectedCallback);
+  iosTracker.addDisconnectionListner(deviceRemovecCallback);
+
+  await Promise.all([androidTracker.start(), iosTracker.start()]);
 
   // (async function() {
   //   const gsmarena = require('./index');

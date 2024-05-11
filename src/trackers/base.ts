@@ -10,11 +10,11 @@ export abstract class BaseDeviceTracker implements IDeviceTracker {
   protected deviceConnectedListeners: DeviceListenerCallback[] = [];
   protected deviceDisconnectedListeners: DeviceListenerCallback[] = [];
 
-  public onDeviceConnectLister(listener: DeviceListenerCallback) {
+  public addConnectionLister(listener: DeviceListenerCallback) {
     this.deviceConnectedListeners.push(listener);
   }
 
-  public onDeviceDisconnectLister(listener: DeviceListenerCallback) {
+  public addDisconnectionListner(listener: DeviceListenerCallback) {
     this.deviceDisconnectedListeners.push(listener);
   }
 
