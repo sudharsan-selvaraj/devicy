@@ -1,6 +1,6 @@
 # devicy
 
-devicy is a Node.js library designed for real-time detection of connected Android and iOS devices. It offers a simple and efficient way to identify devices connected to your development environment, aiding in device management and interaction during the development process.
+devicy is a Node.js library designed for real-time detection of connected Android and iOS devices. It offers a simple and efficient way to identify devices connected to your development environment, aiding in device management.
 
 ## Installation
 
