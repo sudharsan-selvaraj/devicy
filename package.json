@@ -1,12 +1,30 @@
 {
   "name": "devicy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@devicefarmer/adbkit": "^3.2.6",
+    "async-lock": "^1.4.1",
+    "async-wait-until": "^2.0.12",
+    "gsmarena-api": "^2.0.5",
+    "lodash": "^4.17.21",
+    "node-ios-device": "^1.11.0",
+    "node-simctl": "^7.4.2",
+    "plist": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/async-lock": "^1.4.2",
+    "@types/lodash": "^4.17.1",
+    "@types/node": "^20.12.11",
+    "@types/plist": "^3.0.5",
+    "typescript": "^5.4.5"
+  }
 }
