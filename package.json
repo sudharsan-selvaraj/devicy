@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@devicefarmer/adbkit": "^3.2.6",
+    "appium-ios-device": "^2.7.16",
     "async-lock": "^1.4.1",
     "async-wait-until": "^2.0.12",
     "gsmarena-api": "^2.0.5",
