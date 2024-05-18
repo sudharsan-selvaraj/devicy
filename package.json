@@ -1,8 +1,16 @@
 {
   "name": "devicy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cross platform real-time detection of connected Android and iOS devices",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudharsan-selvaraj/devicy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sudharsan-selvaraj/devicy/issues"
+  },
+  "homepage": "https://github.com/sudharsan-selvaraj/devicy#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "tsc"
