@@ -1,6 +1,6 @@
 {
   "name": "devicy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Cross platform real-time detection of connected Android and iOS devices",
   "main": "index.js",
   "repository": {
@@ -25,7 +25,6 @@
     "async-wait-until": "^2.0.12",
     "gsmarena-api": "^2.0.5",
     "lodash": "^4.17.21",
-    "node-ios-device": "^1.11.0",
     "node-simctl": "^7.4.2",
     "plist": "^3.1.0"
   },
